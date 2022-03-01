@@ -1,3 +1,10 @@
+// 初始化
+Bmob.initialize("f89ecd993347c04e", "001103");
+Bmob.debug(true);
+
+// 函数
+
+// 注册账号
 function register_account() {
     let params = {
         username: document.getElementById("username").value,
@@ -17,10 +24,10 @@ function register_account() {
         });
     }
     else {
-        alert("密码不一致！")
+        alert("密码不一致")
     }
 }
-
+// 登录账号
 function login_account() {
     Bmob.User.login(document.getElementById("userName").value, document.getElementById("pWd").value).then(res => {
         location.href = "pages/home.html";
