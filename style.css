@@ -7,7 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #9c27b0;
+    background: #63bbd0;
 }
 .loader{
     position: relative;
@@ -19,7 +19,7 @@ body{
 .loader span{
     position: absolute;
     display: block;
-    border: 5px solid #fff;
+    border: 5px solid #f1c4cd;
     box-shadow: 0 5px 0 #ccc, inset 0 5px 0 #ccc;
     box-sizing: border-box;
     border-radius: 50%;
