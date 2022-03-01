@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="JS/Bmob-2.2.5.min.js"></script>
+    <script src="JS/index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/index.css">
     <title>夜卜小魔王</title>
+    <script>
+        Bmob.initialize("f89ecd993347c04e", "001103");
+        Bmob.debug(true);
+    </script>
 </head>
 
 <body>
@@ -16,18 +22,17 @@
             <!-- 注册 -->
             <div class="register-box hidden">
                 <h1>register</h1>
-                <input type="text" placeholder="用户名">
-                <input type="email" placeholder="邮箱">
-                <input type="password" placeholder="密码">
-                <input type="password" placeholder="确认密码">
-                <button>注册</button>
+                <input type="text" id="username" placeholder="用户名">
+                <input type="email" id="emailadress" placeholder="邮箱">
+                <input type="password" id="pwd" placeholder="密码">
+                <button onclick="register_account()">注册</button>
             </div>
             <!-- 登录 -->
             <div class="login-box">
                 <h1>login</h1>
-                <input type="text" placeholder="用户名">
-                <input type="password" placeholder="密码">
-                <button>登录</button>
+                <input type="text" id="userName" placeholder="用户名">
+                <input type="password" id="pWd" placeholder="密码">
+                <button onclick="login_account()">登录</button>
             </div>
         </div>
 
@@ -57,7 +62,6 @@
             form_box.style.left = '46%';
             login_box.classList.add('hidden');
             register_box.classList.remove('hidden');
-            console.log(form_box.style)
         })
 
         login.addEventListener('click', () => {

@@ -58,6 +58,7 @@ h1{
     color: #f7f4ed;
     /* 字间距 */
     letter-spacing: 8px;
+    font-size: 36px;
     font-family: fangsong;
 
 }
@@ -71,16 +72,16 @@ input{
     padding: 10px 0;
     text-indent: 10px;
     margin: 8px 0 ;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 2px;
 }
 input::placeholder{
     color: #f7f4ed;
 }
 input:focus{
-    color: #a262ad;
+    color: #05dabd;
     outline: none;
-    border-bottom: 1px solid #a262ad80;
+    border-bottom: 1px solid #05dabd80;
     transition: 0.5s;
 }
 input:focus::placeholder{
