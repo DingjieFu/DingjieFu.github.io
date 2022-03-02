@@ -2341,11 +2341,11 @@ body:after {
   }
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .story-area .story-title.sm-hide {
     display: none;
   }
-}
+} */
 
 .story-area:after {
   position: absolute;
