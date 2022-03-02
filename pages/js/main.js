@@ -50,3 +50,9 @@ $(document).ready(function () {
     });
 
 });
+
+
+// 部分函数
+function enter_latest() {
+    window.location.href = "about.html"
+}
