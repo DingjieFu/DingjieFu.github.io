@@ -19,7 +19,7 @@ jobs:
           TZ: Asia/Shanghai
         run: |
           DATE=$(date +"%b. %d, %Y")
-          sed -i "s/Last updated: .*<\/span>/Last updated: ${DATE}<\/span>/" index.html
+          perl -0777 -i -pe "s#<span id=\"last-updated\"[^>]*>.*?</span>#<span id=\"last-updated\" style=\"color:Red\">Last updated: ${DATE}</span>#s" index.html
 
       - name: Commit and push if changed
         run: |
