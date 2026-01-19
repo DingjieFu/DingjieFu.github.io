@@ -1,0 +1,30 @@
+name: Auto update last updated date (UTC+8)
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  update-date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update date in HTML (UTC+8)
+        env:
+          TZ: Asia/Shanghai
+        run: |
+          DATE=$(date +"%b. %d, %Y")
+          sed -i "s/Last updated: .*<\/span>/Last updated: ${DATE}<\/span>/" index.html
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Auto update last updated date (UTC+8)"
+          git push
