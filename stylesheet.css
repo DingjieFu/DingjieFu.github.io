@@ -155,3 +155,22 @@ span.highlight {
   font-weight: 600;
   font-size: 0.9em;
 }
+
+
+.icon-bar {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.icon-bar a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 1.3em;
+  color: #1e6cff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon-bar a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
